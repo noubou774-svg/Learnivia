@@ -19,8 +19,11 @@
 <link rel="stylesheet" href="emil.css">
 <link rel="stylesheet" href="fixes.css">
 <link rel="stylesheet" href="responsive-nav.css">
+<link rel="stylesheet" href="sat-tutoring-fixes.css">
+<link rel="stylesheet" href="header.css">
+<link rel="stylesheet" href="placeholders.css">
 </head>
-<body class="page">
+<body class="page sat-tutoring">
 <div class="top">
     <a
         href="index.html"
@@ -193,40 +196,16 @@
         aria-hidden="true"
     ></div>
     <div class="front">
-        <span class="front_text">
-         Free 
-        </span>
-          <span class="front_text">
-        Official 
-        </span>
-         <span class="front_text">
-         SAT® 
-        </span>
-          <span class="front_text">
-          Tutoring
-        </span>
+        <h1 class="front_text">Free Official SAT® Tutoring</h1>
     </div>
     <div class="front2">
-        <span class="front_text3">
-        Join over 
-
-            <br>
-           k students
-135
-            <br><br>
-           
-
-
-in partnership with
-Our tutors are high school students who scored in the 95th percentile or above on the section they teach. All tutors are freshly familiar with the SAT, fully trained and certified, and eager to help you reach your goals.
-        </span>
-      
-        <button class="for-parents">
-          Become a tutor
-        </button>
-        <button class="for-educator">
-            Join a Bootcamp
-        </button>
+        <p class="front_text3 hero-lead">Join over <strong class="hero-stat">135k</strong> students</p>
+        <p class="hero-partnership">in partnership with <strong>College Board</strong></p>
+        <p class="hero-subcopy">Our tutors are high school students who scored in the 95th percentile or above on the section they teach. All tutors are freshly familiar with the SAT, fully trained and certified, and eager to help you reach your goals.</p>
+        <div class="hero-actions">
+            <a href="become-tutor.html" class="btn-secondary">Become a tutor</a>
+            <a href="signup.html" class="btn-primary">Join a Bootcamp</a>
+        </div>
     </div>
     <div class="imgs">
         <img
@@ -246,28 +225,17 @@ Our tutors are high school students who scored in the 95th percentile or above o
         >
     </div>
 </div>
-<div class="enroll-div">
-<div>
-  <span class="enroll-text">Enroll </span>
-</div>
-<div>
-  <span class="enroll-text2">                    
-  Anytime.</span>
-</div>
-<div>
-  <span class="enroll-text3">                    
-  New Sessions Starting </span>
-  <span class="enroll-text4">
-    Every 
-    Week..
-  </span>
-</div>
-<div enroll2-div>
-<span class="enroll2-text">  Our Bootcamps run on a rolling basis, with new series starting every week.</span>
-<span class="enroll2-text2">Spots fill quickly as test dates approach. Enroll early for the most scheduling flexibility. You do not need to be registered for a specific test date to join.</span>
+<section class="enroll-section">
+    <div class="enroll-intro">
+        <h2 class="enroll-heading">Enroll <span>Anytime.</span></h2>
+        <p class="enroll-tagline">New sessions starting every week.</p>
+    </div>
+    <div class="enroll-copy">
+        <p>Our Bootcamps run on a rolling basis, with new series starting every week.</p>
+        <p>Spots fill quickly as test dates approach. Enroll early for the most scheduling flexibility. You do not need to be registered for a specific test date to join.</p>
+    </div>
+</section>
 
-</div>
-<div>
 <!-- ============================= -->
 <!-- BOOTCAMPS / FOCUS SESSIONS -->
 <!-- ============================= -->
@@ -464,7 +432,7 @@ Our tutors are high school students who scored in the 95th percentile or above o
             build confidence in the sections I was good in and recognize what
             sections needed more attention. When test day rolled around I felt
             way more prepared. I went from a 1080 to a 1320 with the help of
-            Schoolhouse.world."
+            Learnivia."
         </p>
 
         <strong>Nagi G.</strong>
@@ -579,7 +547,7 @@ Our tutors are high school students who scored in the 95th percentile or above o
     <h2>Real stories from real students</h2>
 
     <p class="stories-subtitle">
-        These students participated in Schoolhouse's free programs.
+        These students participated in Learnivia's free programs.
     </p>
 
     <div class="stories-grid">
@@ -626,7 +594,7 @@ Our tutors are high school students who scored in the 95th percentile or above o
                 did sessions with her. She is very helpful and thorough in
                 her explanations. I had a very big jump in my SAT math score
                 after doing her bootcamp series. Highly recommend both her
-                and Schoolhouse as a whole!"
+                and Learnivia as a whole!"
             </p>
 
             <strong>Satereh L.</strong>
@@ -663,22 +631,16 @@ Our tutors are high school students who scored in the 95th percentile or above o
 
 </section>
 
-
-</section>>
 <p class="meet">
     Meet our Certified Tutors
 </p>
 <p class="tutor">
     Our tutors are high school students just like you.
 </p>
-<div class="student-video">
-    2
-</div>
-<div class="student-video2">
-    2
-</div>
-<div class="student-video3">
-    2
+<div class="tutor-videos-grid">
+    <div class="student-video" data-label="SAT Tutor"></div>
+    <div class="student-video2" data-label="Math Tutor"></div>
+    <div class="student-video3" data-label="Essay Coach"></div>
 </div>
 
    <div class="educator-safety">
@@ -767,7 +729,7 @@ Our learning environment is designed around student wellbeing, responsible commu
 <div class="the-text">
 <p class="peer-text">peer to peer Sat tutoring</p>
 <p class="something-text">Find the program that works best with your busy schedule. Our tutors are here to help!</p>
-<button class="join-bootcamp">Join Bootcamp</button>
+<a href="signup.html" class="join-bootcamp btn-primary">Join Bootcamp</a>
 </div>
 </div>
 
@@ -863,135 +825,56 @@ Our learning environment is designed around student wellbeing, responsible commu
 
 <footer class="learnivia-footer">
 
-<div class="-top">
-
-
+<div class="footer-top">
+<a href="index.html" class="footer-logo">
+<img src="image_1.jpg/fox.jpeg" alt="Learnivia">
+<span>Learnivia</span>
+</a>
+<div class="social-links">
+<a href="#" aria-label="Twitter">𝕏</a>
+<a href="#" aria-label="Facebook">f</a>
+<a href="#" aria-label="Instagram">◎</a>
+<a href="#" aria-label="YouTube">▶</a>
+<a href="#" aria-label="TikTok">♪</a>
+<a href="#" aria-label="LinkedIn">in</a>
 </div>
-
-</section>
-   
-
-<div class="footer">
-
-<footer class="learnivia-footer">
-    <div class="footer-top">
-        <a
-            href="index.html"
-            class="footer-logo"
-        >
-            <img
-                src="image_1.jpg/fox.jpeg"
-                alt="Learnivia"
-            >
-            <span>
-                Learnivia
-            </span>
-        </a>
-        <div class="social-links">
-            <a href="#" aria-label="Twitter">
-                𝕏
-            </a>
-            <a href="#" aria-label="Facebook">
-                f
-            </a>
-            <a href="#" aria-label="Instagram">
-                ◎
-            </a>
-            <a href="#" aria-label="YouTube">
-                ▶
-            </a>
-            <a href="#" aria-label="TikTok">
-                ♪
-            </a>
-            <a href="#" aria-label="LinkedIn">
-                in
-            </a>
-        </div>
-    </div>
-    <div class="footer-columns">
-        <div class="footer-column">
-            <span class="footer-column-title">
-                ABOUT
-            </span>
-            <a href="about.html">
-                About Us
-            </a>
-            <a href="partnerships.html">
-                Partnerships
-            </a>
-            <a href="roadmap.html">
-                Roadmap
-            </a>
-            <a href="careers.html">
-                Careers
-            </a>
-            <a href="donate.html">
-                Donate
-            </a>
-        </div>
-        <div class="footer-column">
-            <span class="footer-column-title">
-                LEARNING
-            </span>
-            <a href="peer-tutoring.html">
-                Peer Tutoring
-            </a>
-            <a href="certification.html">
-                Get Certified
-            </a>
-            <a href="become-tutor.html">
-                Become a Tutor
-            </a>
-            <a href="safety.html">
-                Session Safety
-            </a>
-        </div>
-        <div class="footer-column">
-            <span class="footer-column-title">
-                COMMUNITY
-            </span>
-            <a href="blog.html">
-                Blog
-            </a>
-            <a href="story.html">
-                Learnivia Stories
-            </a>
-            <a href="help.html">
-                Help Center
-            </a>
-            <a href="get-involved.html">
-                Get Involved
-            </a>
-        </div>
-        <div class="footer-column">
-            <span class="footer-column-title">
-                INFORMATION
-            </span>
-            <a href="terms.html">
-                Terms of Service
-            </a>
-            <a href="privacy.html">
-                Privacy Policy
-            </a>
-            <a href="safety.html">
-                Trust & Safety
-            </a>
-            <a href="contact.html">
-                Contact
-            </a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <span>
-            © 2026 Learnivia
-        </span>
-        <span>
-            Learn together. Grow together.
-        </span>
-    </div>
+</div>
+<div class="footer-columns">
+<div class="footer-column">
+<span class="footer-column-title">ABOUT</span>
+<a href="about.html">About Us</a>
+<a href="partnerships.html">Partnerships</a>
+<a href="about.html">Roadmap</a>
+<a href="partnerships.html">Careers</a>
+<a href="donate.html">Donate</a>
+</div>
+<div class="footer-column">
+<span class="footer-column-title">LEARNING</span>
+<a href="peer-tutoring.html">Peer Tutoring</a>
+<a href="become-tutor.html">Get Certified</a>
+<a href="become-tutor.html">Become a Tutor</a>
+<a href="faq.html">Session Safety</a>
+</div>
+<div class="footer-column">
+<span class="footer-column-title">COMMUNITY</span>
+<a href="blog.html">Blog</a>
+<a href="stories.html">Learnivia Stories</a>
+<a href="faq.html">Help Center</a>
+<a href="become-tutor.html">Get Involved</a>
+</div>
+<div class="footer-column">
+<span class="footer-column-title">INFORMATION</span>
+<a href="faq.html">Terms of Service</a>
+<a href="faq.html">Privacy Policy</a>
+<a href="faq.html">Trust & Safety</a>
+<a href="faq.html">Contact</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Learnivia</span>
+<span>Learn together. Grow together.</span>
+</div>
 </footer>
-</div>
-</div>
 
 <script>
 const menu = document.querySelector(".explore-menu");
@@ -1075,5 +958,6 @@ document.querySelectorAll(".faq-question").forEach(
 
 
 <script src="motion.js" defer></script>
+<script src="site-interactions.js" defer></script>
 </body>
 </html>

@@ -82,19 +82,13 @@ body.page > .donate-hero,
 
 @media (max-width: 1024px) {
     .top .about-1,
-    .top .story-1 {
-        display: none !important;
-    }
-}
-
-@media (max-width: 860px) {
+    .top .story-1,
     .top .faq-1,
-    .top .donate-1 {
-        display: none !important;
-    }
-
-    .top .signin-button {
-        display: none !important;
+    .top .donate-1,
+    .top .signin-button,
+    .top .index-1,
+    .top .involve-1 {
+        display: inline-flex !important;
     }
 }
 
