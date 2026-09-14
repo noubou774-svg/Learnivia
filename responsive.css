@@ -1,7 +1,23 @@
 /**
  * Learnivia — responsive layout (original UI colors preserved)
  * Fixes horizontal overflow on all screen sizes.
+ * v4 — removes legacy nav horizontal scroll (overflow-x: auto)
  */
+
+@media (max-width: 767px) {
+    .top {
+        flex-wrap: wrap !important;
+        overflow-x: hidden !important;
+        overflow-y: visible !important;
+        -webkit-overflow-scrolling: auto !important;
+    }
+}
+
+.testimonial-track,
+.testimonial-slider {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
 
 :root {
     --nav-offset: 75px;
@@ -813,8 +829,22 @@ iframe {
 @media (max-width: 1199px) {
     .debate-hero,
     .debate-hero-text,
+    .dialogue-text,
+    .dialogue-text2,
+    .dialogue-text3,
+    .dialogue-club-text,
+    .second-area,
+    .meaning-text,
+    .heart-fox,
+    .partner-section,
+    .partner-content,
+    .partner-right,
+    .real-stories-header,
     .dialogue-topics,
     .dialogue-topic,
+    .the-video,
+    .google-meet,
+    .thing,
     .partnership-hero,
     .partnership-content,
     .educator-hero,
