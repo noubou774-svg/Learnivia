@@ -44,3 +44,19 @@ body {
 .message-button {
     text-decoration: none;
 }
+
+/* Critical mobile overflow guard (loads before mobile-layout.css) */
+@media (max-width: 767px) {
+    html,
+    body,
+    body.page {
+        overflow-x: hidden !important;
+        max-width: 100% !important;
+    }
+
+    .top {
+        flex-wrap: wrap !important;
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+    }
+}

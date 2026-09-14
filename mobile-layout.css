@@ -1,0 +1,897 @@
+/**
+ * Learnivia — responsive layout (original UI colors preserved)
+ * Fixes horizontal overflow on all screen sizes.
+ * v4 — removes legacy nav horizontal scroll (overflow-x: auto)
+ */
+
+@media (max-width: 767px) {
+    .top {
+        flex-wrap: wrap !important;
+        overflow-x: hidden !important;
+        overflow-y: visible !important;
+        -webkit-overflow-scrolling: auto !important;
+    }
+}
+
+.testimonial-track,
+.testimonial-slider {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+}
+
+:root {
+    --nav-offset: 75px;
+}
+
+html {
+    scroll-padding-top: var(--nav-offset);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+body,
+body.page {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+img,
+video,
+svg,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.explore-menu {
+    top: var(--nav-offset, 75px) !important;
+    height: calc(100vh - var(--nav-offset, 75px)) !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    left: 0 !important;
+    right: 0 !important;
+}
+
+.explore-menu-content {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+}
+
+/* ═══════════════════════════════════════════
+   NAV — never wider than viewport
+   ═══════════════════════════════════════════ */
+.top {
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 1199px) {
+    .top {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 0.35rem 0.5rem !important;
+        height: auto !important;
+        min-height: 75px;
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    .top .brand {
+        margin-right: auto !important;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .top .index-1,
+    .top .about-1,
+    .top .faq-1,
+    .top .story-1,
+    .top .involve-1,
+    .top .donate-1,
+    .top .signin-button,
+    .top .signup-button {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        margin: 0 !important;
+        margin-left: 0 !important;
+        flex: 0 0 auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .top .about-1,
+    .top .faq-1,
+    .top .story-1 {
+        display: none !important;
+    }
+
+    .top .index-1,
+    .top .involve-1,
+    .top .donate-1,
+    .top .signin-button,
+    .top .signup-button {
+        display: inline-flex !important;
+        font-size: 10px !important;
+        padding: 6px 8px !important;
+    }
+
+    .top .donate-1 {
+        padding: 5px 10px !important;
+    }
+
+    .top .signup-button {
+        min-width: 64px !important;
+        height: 34px !important;
+    }
+
+    .top .brand-name {
+        font-size: 1.1rem !important;
+    }
+
+    .top .fox {
+        width: 36px !important;
+        height: 36px !important;
+    }
+}
+
+@media (max-width: 420px) {
+    .top .signin-button {
+        display: none !important;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   HERO (.space)
+   ═══════════════════════════════════════════ */
+.space,
+.workshops-hero,
+.debate-hero,
+.tutor-hero,
+.hero-stories,
+.donate-hero,
+.signin-page,
+.signup-page {
+    margin-top: var(--nav-offset, 75px);
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 1199px) {
+    .space {
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 2rem 5% 2.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .space .bga-05__terrain,
+    .space .bga-05__ridge {
+        display: none !important;
+    }
+
+    .front,
+    .front2 {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        display: block !important;
+    }
+
+    .front_text {
+        font-size: clamp(2rem, 10vw, 4.5rem) !important;
+        word-spacing: normal !important;
+        letter-spacing: -2px !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .front_text2 {
+        font-size: clamp(1.25rem, 5vw, 2.5rem) !important;
+        margin-left: 0 !important;
+    }
+
+    .front_text3 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .front2 {
+        margin-top: 1rem !important;
+    }
+
+    .imgs {
+        position: relative !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 0.5rem !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 1rem 0 0 !important;
+    }
+
+    .imgs .man,
+    .imgs .Woman,
+    .imgs .man2,
+    .imgs img {
+        position: relative !important;
+        margin: 0 !important;
+        left: auto !important;
+        width: 52px !important;
+        height: 52px !important;
+    }
+
+    .start-learning-button,
+    .for-parents,
+    .for-educator {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0.5rem 0 0 !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   PROGRAMS / LEARNING SECTION
+   ═══════════════════════════════════════════ */
+@media (max-width: 1199px) {
+    .program,
+    .program2,
+    .learning-section,
+    .left-content,
+    .right-cards,
+    .right-content,
+    .cards-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        left: auto !important;
+        right: auto !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+    }
+
+    .program2 {
+        margin-top: 0 !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 2rem 5% !important;
+    }
+
+    .learning-section {
+        height: auto !important;
+        display: block !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .left-content {
+        position: relative !important;
+        top: auto !important;
+        height: auto !important;
+        padding: 1rem 0 !important;
+        width: 100% !important;
+    }
+
+    .programs,
+    .programs-2,
+    .program2-h1,
+    .ever-text,
+    .last-text,
+    .officialsat-text,
+    .officialsat-text1,
+    .Dialogue-text,
+    .Dialogue-text1,
+    .Dialogue-text2,
+    .admission-text,
+    .Homework-text,
+    .div-phantom {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .learning-cards {
+        grid-template-columns: 1fr !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        margin: 2rem auto 0 !important;
+        padding: 0 !important;
+        gap: 1.5rem !important;
+    }
+
+    .learning-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 0 !important;
+    }
+
+    .headphone-fox1,
+    .headphone-fox,
+    .hill {
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        position: relative !important;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   PEER / VIDEO / CERTIFICATION
+   ═══════════════════════════════════════════ */
+@media (max-width: 1199px) {
+    .peer {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 2rem 5% 3rem !important;
+        overflow: hidden !important;
+    }
+
+    .the-video,
+    .google-meet,
+    .book-a,
+    .the-text,
+    .peer-text,
+    .something-text,
+    .join-bootcamp,
+    .certification,
+    .certification-image,
+    .certification-wrap,
+    .meet,
+    .tutor,
+    .student-video,
+    .student-video2,
+    .student-video3 {
+        position: relative !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 1rem 0 0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .the-video {
+        height: auto !important;
+        min-height: 200px;
+    }
+
+    .google-meet {
+        display: block;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .join-bootcamp {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .peer-text {
+        font-size: clamp(1.75rem, 7vw, 3rem) !important;
+        margin-top: 0 !important;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   CREATOR / STORIES / HOW IT WORKS / BLOG
+   ═══════════════════════════════════════════ */
+@media (max-width: 1199px) {
+    .creator {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 2rem 5% !important;
+        padding: 1.5rem !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+    }
+
+    .creator-profil,
+    .diplome {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 0 auto 1rem !important;
+        max-width: min(100%, 120px) !important;
+        display: block !important;
+    }
+
+    .creator_text,
+    .creator_text2,
+    .testimonial-text,
+    .testimonial-author,
+    .testimonial-publication {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        margin-left: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .real-stories,
+    .stories-container,
+    .story-card,
+    .how-space,
+    .how-steps,
+    .how-step {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .stories-container {
+        grid-template-columns: 1fr !important;
+        padding: 0 5% !important;
+        margin: 2rem auto !important;
+    }
+
+    .pick-up,
+    .pick-up2,
+    .build-up,
+    .join-up {
+        position: relative !important;
+        margin: 1rem auto !important;
+        left: auto !important;
+        width: min(100%, 280px) !important;
+        display: block !important;
+        text-align: center;
+    }
+
+    .learnivia-blog {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        padding: 3rem 5% !important;
+        box-sizing: border-box !important;
+    }
+
+    .blog-header,
+    .blog-grid,
+    .blog-cards,
+    .blog-card,
+    .blog-image,
+    .blog-image-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    .blog-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+
+    .blog-header h2 {
+        font-size: clamp(1.75rem, 6vw, 3rem) !important;
+    }
+
+    .learnivia-faq,
+    .faq-inner,
+    .faq-heading,
+    .faq-list {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   SAT TUTORING PAGE
+   ═══════════════════════════════════════════ */
+@media (max-width: 1199px) {
+    body.page .space,
+    .sat-programs,
+    .program-grid,
+    .program-card,
+    .enroll-div,
+    .enroll-section,
+    .enroll2-div,
+    .enroll2-text,
+    .enroll2-text2,
+    .program-tabs,
+    .free-bottom,
+    .free-features,
+    .featured-story,
+    .how-it-works,
+    .student-stories-wrap,
+    .stories-grid,
+    .educator-safety,
+    .safety-grid,
+    .label,
+    .label2,
+    .headphone-fox,
+    .headphone-fox2,
+    .program-tabs h2,
+    .free-sat,
+    .free-sat-wrap,
+    .student-location {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .sat-programs {
+        margin-top: 2rem !important;
+        padding: 0 5% !important;
+    }
+
+    .program-tabs {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.75rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .program-tabs h2 {
+        font-size: clamp(1.75rem, 6vw, 3rem) !important;
+    }
+
+    .enroll2-text,
+    .enroll2-text2 {
+        display: block !important;
+        font-size: 1rem !important;
+        margin-top: 0.75rem !important;
+    }
+
+    .program-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem;
+        padding: 0 5%;
+        margin-top: 1.5rem !important;
+        overflow: hidden !important;
+    }
+
+    .program-card,
+    .focus-card,
+    .focus-card-2,
+    .program-card-2,
+    .program-bottom,
+    .something-text,
+    .something-text-2,
+    .featured-story,
+    .featured-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        height: auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .something-text-2 {
+        font-size: clamp(1.75rem, 7vw, 3rem) !important;
+    }
+
+    .focus-card,
+    .focus-card-2 {
+        padding: 1rem !important;
+        margin-top: 0.75rem !important;
+    }
+
+    .headphone-fox,
+    .headphone-fox2 {
+        height: auto !important;
+        max-height: 120px !important;
+        margin: 1rem auto !important;
+        display: block !important;
+    }
+
+    .label,
+    .label2 {
+        font-size: clamp(1.25rem, 4vw, 1.75rem) !important;
+        margin-top: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+
+    .free-bottom {
+        padding: 0 5% !important;
+    }
+
+    .front2 .for-parents,
+    .front2 .for-educator {
+        width: 100% !important;
+        margin: 0.5rem 0 0 !important;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   WORKSHOPS / STORIES / PARENT / OTHER PAGES
+   ═══════════════════════════════════════════ */
+@media (max-width: 1199px) {
+    .workshops-hero {
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 2rem 5% 2.5rem !important;
+        box-sizing: border-box !important;
+    }
+
+    .workshops-hero-text {
+        font-size: clamp(2rem, 9vw, 4rem) !important;
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .join-dialogue {
+        width: 100% !important;
+        margin-left: 0 !important;
+        padding-top: 1rem !important;
+        font-size: 1rem !important;
+    }
+
+    .signup2-button {
+        margin-left: 0 !important;
+        margin-top: 1rem !important;
+    }
+
+    .workshops-features {
+        width: 100% !important;
+        margin: 2rem auto 0 !important;
+        padding: 0 5% !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .workshops-image {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 1rem !important;
+    }
+
+    .feature-card {
+        min-height: 0 !important;
+        width: 100% !important;
+    }
+
+    .workshops-program {
+        position: relative !important;
+        top: auto !important;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 !important;
+    }
+
+    .workshops-layout {
+        width: 100% !important;
+        margin: 2rem auto !important;
+        padding: 0 5% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .workshops-list,
+    .workshop-card,
+    .community-section,
+    .testimonial-slider,
+    .testimonial-track,
+    .testimonial-card,
+    .email {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .workshops-layout,
+    .workshops-features,
+    .workshops-program,
+    .workshops-list,
+    .workshops-image,
+    .workshop-card,
+    .workshops-hero-text,
+    .join-dialogue,
+    .stories-grid,
+    .story-bubble,
+    .Volunteer-section,
+    .Volunteer-content,
+    .Volunteer-cards,
+    .Volunteer-item,
+    .safety-grid,
+    .educator-safety,
+    .parent-programs,
+    .program-grid-parent,
+    .debate-hero,
+    .dialogue-topics,
+    .partnership-hero,
+    .donate-hero,
+    .donate-intro,
+    .faq-content,
+    .faq-grid,
+    .faq-cards,
+    .faq-card,
+    .signin-page,
+    .signup-page,
+    .signin-card,
+    .signup-card,
+    main,
+    section,
+    aside,
+    footer {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .workshops-layout,
+    .workshops-features {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+    }
+
+    .workshop-card,
+    .workshops-list,
+    .workshops-program {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr !important;
+        width: min(100%, 1180px) !important;
+        margin-inline: auto !important;
+        padding: 0 5% !important;
+    }
+
+    .Volunteer-content {
+        padding: 0 5% !important;
+    }
+
+    .signin-page,
+    .signup-page,
+    .signin-card,
+    .signup-card {
+        width: 100% !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+}
+
+/* ═══════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════ */
+.learnivia-footer {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 1rem;
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1.25rem !important;
+    }
+
+    .learnivia-footer {
+        min-height: 0 !important;
+        padding: 2.5rem 5% 1.5rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-columns {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Debate / partnership / educator / donate page layouts */
+@media (max-width: 1199px) {
+    .debate-hero,
+    .debate-hero-text,
+    .dialogue-text,
+    .dialogue-text2,
+    .dialogue-text3,
+    .dialogue-club-text,
+    .second-area,
+    .meaning-text,
+    .heart-fox,
+    .partner-section,
+    .partner-content,
+    .partner-right,
+    .real-stories-header,
+    .dialogue-topics,
+    .dialogue-topic,
+    .the-video,
+    .google-meet,
+    .thing,
+    .partnership-hero,
+    .partnership-content,
+    .educator-hero,
+    .educator-programs,
+    .parent-hero,
+    .parent-programs,
+    .program-grid-parent,
+    .parent-program-card,
+    .donate-content,
+    .donate-options,
+    .become-tutor-hero,
+    .tutor-steps,
+    .blog-hero,
+    .about-hero,
+    .about-content,
+    .faq-hero,
+    .faq-content,
+    .signin-wrap,
+    .signup-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+        box-sizing: border-box !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+    }
+
+    .program-grid-parent,
+    .dialogue-topics,
+    .donate-options,
+    .tutor-steps {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+}
+
+/* Catch-all: kill horizontal scroll from legacy absolute blocks */
+@media (max-width: 1199px) {
+    [class*="hero"],
+    .page > div,
+    .page > section {
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+}
