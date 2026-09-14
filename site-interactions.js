@@ -148,4 +148,15 @@
             window.alert('Google Sign In will be available when authentication is connected.');
         });
     }
+
+    /* Sync dropdown offset when nav wraps on smaller screens */
+    function syncNavOffset() {
+        var nav = document.querySelector('.top');
+        if (!nav) return;
+        document.documentElement.style.setProperty('--nav-offset', nav.offsetHeight + 'px');
+    }
+
+    syncNavOffset();
+    window.addEventListener('resize', syncNavOffset);
+    window.addEventListener('load', syncNavOffset);
 })();
