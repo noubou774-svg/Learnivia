@@ -30,6 +30,24 @@
 
 <link rel="stylesheet" href="fixes.css?v=5">
 <link rel="stylesheet" href="responsive.css?v=5">
+
+<style id="learnivia-mobile-fix">
+html,body,body.page{overflow-x:hidden!important;max-width:100%!important;width:100%!important}
+.top{width:100%!important;max-width:100vw!important;overflow-x:hidden!important;box-sizing:border-box!important}
+@media (max-width:1199px){
+  .top{display:flex!important;flex-wrap:wrap!important;align-items:center!important;height:auto!important;min-height:75px;padding:.5rem .75rem!important}
+  .top .index-1,.top .about-1,.top .faq-1,.top .story-1,.top .involve-1,.top .donate-1,.top .signin-button,.top .signup-button{position:static!important;margin:0!important;margin-left:0!important}
+  .program,.program2,.learning-section,.left-content,.right-cards,.right-content,.peer,.creator,.learnivia-blog,.real-stories,.stories-container,.how-space,.certification-wrap,.sat-programs,.program-grid,.workshops-hero,.workshops-layout,.workshops-features,.debate-hero,.second-area,.partner-section{width:100%!important;max-width:100%!important;margin-left:0!important;left:auto!important;right:auto!important;position:relative!important;box-sizing:border-box!important}
+  .program2,.learning-section{display:block!important;grid-template-columns:1fr!important;height:auto!important;padding:2rem 5%!important}
+  .learning-cards,.stories-container,.blog-grid,.program-grid,.stories-grid{grid-template-columns:1fr!important;width:100%!important;max-width:100%!important}
+  .front,.front2,.the-video,.google-meet,.join-bootcamp,.pick-up,.pick-up2,.build-up,.join-up{width:100%!important;max-width:100%!important;margin-left:0!important;position:relative!important;left:auto!important}
+}
+@media (max-width:767px){
+  .top .about-1,.top .faq-1,.top .story-1{display:none!important}
+  .top{flex-wrap:wrap!important;overflow-x:hidden!important}
+}
+</style>
+
 </head>
 
 <body class="page">
