@@ -1,62 +1,81 @@
-/* Minimal fixes only — smooth scroll + broken layout repairs (no UI redesign) */
-
-html {
-    scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-}
-
-body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-}
-
-/* Broken parent volunteer section */
-.Volunteer-content {
-    display: block;
-    width: 100%;
-    max-width: 1180px;
-    margin-inline: auto;
-}
-
-.Volunteer-cards {
-    margin-top: 2rem;
-}
-
-.Volunteer-item {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-}
-
-.Volunteer-image img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Signup / auth helpers */
-.next-button,
-.message-button {
-    text-decoration: none;
-}
-
-/* Critical mobile overflow guard (loads before mobile-layout.css) */
-@media (max-width: 767px) {
-    html,
-    body,
-    body.page {
-        overflow-x: hidden !important;
-        max-width: 100% !important;
-    }
-
-    .top {
-        flex-wrap: wrap !important;
-        overflow-x: hidden !important;
-        max-width: 100vw !important;
-    }
-}
+/* Minimal fixes — smooth scroll + mobile overflow guard (no UI redesign) */
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body,
+body.page {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Broken parent volunteer section */
+.Volunteer-content {
+    display: block;
+    width: 100%;
+    max-width: 1180px;
+    margin-inline: auto;
+}
+
+.Volunteer-cards {
+    margin-top: 2rem;
+}
+
+.Volunteer-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.Volunteer-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Signup / auth helpers */
+.next-button,
+.message-button {
+    text-decoration: none;
+}
+
+/* Nav: kill legacy margin-left offsets on all page stylesheets */
+@media (max-width: 1199px) {
+    .top .index-1,
+    .top .about-1,
+    .top .faq-1,
+    .top .story-1,
+    .top .involve-1,
+    .top .donate-1 {
+        margin-left: 0 !important;
+        position: static !important;
+    }
+
+    .top {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        overflow-x: hidden !important;
+        max-width: 100vw !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .top .about-1,
+    .top .faq-1,
+    .top .story-1 {
+        display: none !important;
+    }
+}
