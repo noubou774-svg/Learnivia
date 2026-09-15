@@ -3398,3 +3398,23 @@ button:focus-visible {
     margin-top:-155px;
     width:500px;
  }
+
+/* ── MOBILE RESPONSIVE (embedded so live site works even if responsive.css stale) ── */
+html, body, body.page { overflow-x: hidden !important; max-width: 100% !important; width: 100% !important; }
+.top { width: 100% !important; max-width: 100vw !important; overflow-x: hidden !important; box-sizing: border-box !important; }
+
+@media (max-width: 1199px) {
+    .top { display: flex !important; flex-wrap: wrap !important; align-items: center !important; height: auto !important; min-height: 75px; padding: 0.5rem 0.75rem !important; gap: 0.35rem 0.5rem !important; }
+    .top .index-1, .top .about-1, .top .faq-1, .top .story-1, .top .involve-1, .top .donate-1, .top .signin-button, .top .signup-button { position: static !important; margin: 0 !important; margin-left: 0 !important; left: auto !important; }
+    .program, .program2, .learning-section, .left-content, .right-cards, .right-content, .peer, .creator, .learnivia-blog, .real-stories, .stories-container, .how-space, .certification-wrap, .sat-programs, .program-grid, .workshops-hero, .workshops-layout, .workshops-features, .debate-hero, .second-area, .partner-section { width: 100% !important; max-width: 100% !important; margin-left: 0 !important; left: auto !important; right: auto !important; position: relative !important; box-sizing: border-box !important; }
+    .program2, .learning-section { display: block !important; height: auto !important; padding: 2rem 5% !important; grid-template-columns: 1fr !important; }
+    .learning-cards, .stories-container, .blog-grid, .program-grid, .stories-grid { grid-template-columns: 1fr !important; width: 100% !important; max-width: 100% !important; }
+    .front, .front2, .the-video, .google-meet, .join-bootcamp, .pick-up, .pick-up2, .build-up, .join-up { width: 100% !important; max-width: 100% !important; margin-left: 0 !important; position: relative !important; left: auto !important; }
+    .space { height: auto !important; padding: 2rem 5% !important; overflow: hidden !important; }
+    .last-text { width: 100% !important; margin-left: 0 !important; margin-top: 1rem !important; }
+}
+
+@media (max-width: 767px) {
+    .top { flex-wrap: wrap !important; overflow-x: hidden !important; }
+    .top .about-1, .top .faq-1, .top .story-1 { display: none !important; }
+}
